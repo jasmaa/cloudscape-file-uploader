@@ -8,5 +8,17 @@ Install packages and start dev server:
 
 ```
 yarn install
+```
+
+Run with dev server:
+
+```
 yarn start
+```
+
+...or build and run locally:
+
+```
+yarn build
+npx serve dist
 ```

@@ -10,7 +10,8 @@
     "build:dev": "webpack --mode=development",
     "build:prod": "webpack --mode=production --node-env=production",
     "watch": "webpack --watch",
-    "serve": "webpack serve"
+    "serve": "webpack serve",
+    "deploy": "gh-pages -d dist --no-history"
   },
   "devDependencies": {
     "css-loader": "^6.7.3",
@@ -26,6 +27,7 @@
     "@cloudscape-design/components": "^3.0.196",
     "@cloudscape-design/global-styles": "^1.0.7",
     "cloudscape-file-uploader": "file:../../dist",
+    "gh-pages": "^5.0.0",
     "react-dom": "^18.2.0"
   }
 }
