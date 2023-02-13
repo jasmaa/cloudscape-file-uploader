@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "module": "es6",
+    "declaration": true,
+    "target": "es5",
+    "allowJs": true,
+    "jsx": "react-jsx",
+    "moduleResolution": "node",
+    "outDir": "dist",
+    "skipLibCheck": true
+  },
+  "files": ["src/index.tsx"]
+}
