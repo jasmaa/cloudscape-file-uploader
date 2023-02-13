@@ -16,5 +16,5 @@
   },
   "plugins": ["react", "@typescript-eslint"],
   "rules": {},
-  "ignorePatterns": ["webpack.config.js"]
+  "ignorePatterns": ["webpack.config.js", "dist"]
 }
