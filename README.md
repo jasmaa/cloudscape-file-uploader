@@ -1,8 +1,18 @@
 # Cloudscape File Uploader
 
-A file uploader for Cloudscape
+A file uploader for Cloudscape following: https://cloudscape.design/components/fileupload/
 
-## Getting started
+## Usage
+
+Install the package:
+
+```
+# TODO
+```
+
+See more [examples](./examples/cloudscape-file-uploader-example).
+
+## Development
 
 Install packages and build dist:
 
