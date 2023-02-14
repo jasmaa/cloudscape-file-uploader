@@ -3,7 +3,7 @@ import { queryByRole, queryByText, render } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import FileEntry from ".";
 
-describe("test Token", () => {
+describe("test FileEntry", () => {
   const file = new File(["foo"], "foo.txt", {
     type: "text/plain",
   });

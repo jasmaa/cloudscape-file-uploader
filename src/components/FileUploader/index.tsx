@@ -60,18 +60,19 @@ export default function FileUploader({
           files.length > 0 &&
           (multiple ? (
             Array.from(files).map((file, fileIdx) => (
-              <Token
-                key={`file-${fileIdx}`}
-                onClose={
-                  onFileRemoved
-                    ? () => {
-                        onFileRemoved(fileIdx);
-                      }
-                    : null
-                }
-              >
-                <FileEntry file={file} showImage />
-              </Token>
+              <div key={`file-${fileIdx}`} data-testid={`token-${file.name}`}>
+                <Token
+                  onClose={
+                    onFileRemoved
+                      ? () => {
+                          onFileRemoved(fileIdx);
+                        }
+                      : null
+                  }
+                >
+                  <FileEntry file={file} showImage />
+                </Token>
+              </div>
             ))
           ) : (
             <FileEntry file={files[0]} />
