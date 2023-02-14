@@ -3,31 +3,51 @@ import { Container } from "@cloudscape-design/components";
 import { FileUploader } from "cloudscape-file-uploader";
 
 export default function App() {
-  const [files, setFiles] = useState<File[]>([]);
-  const [errorText, setErrorText] = useState<string>();
+  const [files1, setFiles1] = useState<File[]>();
+  const [errorText1, setErrorText1] = useState<string>();
+  const [files2, setFiles2] = useState<File[]>([]);
+  const [errorText2, setErrorText2] = useState<string>();
 
   return (
     <Container>
       <FileUploader
-        fileInputId="fileUpload"
-        text="Choose file to upload"
-        label="Upload a file"
-        description="You can use this input to upload a file"
-        constraintText="Hint: Press the button to upload a file"
-        errorText={errorText}
-        files={files}
+        fileInputId="singleFileUpload"
+        text="Choose a single file to upload"
+        label="Upload a single file"
+        description="You can use this input to upload files"
+        constraintText="Hint: Press the button to upload files"
+        errorText={errorText1}
+        files={files1}
+        onFilesUploaded={(uploadedFiles) => {
+          if (uploadedFiles.length === 1) {
+            setFiles1([...uploadedFiles]);
+            setErrorText1("");
+          } else {
+            setErrorText1("An error occured.");
+          }
+        }}
+      />
+      <FileUploader
+        fileInputId="multipleFileUpload"
+        text="Choose multiple files to upload"
+        label="Upload multiple files"
+        description="You can use this input to upload files"
+        constraintText="Hint: Press the button to upload files"
+        errorText={errorText2}
+        files={files2}
         multiple
         onFilesUploaded={(uploadedFiles) => {
-          if (uploadedFiles && uploadedFiles.length > 0) {
-            setFiles([...files, ...uploadedFiles]);
+          if (uploadedFiles.length > 0) {
+            setFiles2([...uploadedFiles]);
+            setErrorText2("");
           } else {
-            setErrorText("An error occured.");
+            setErrorText2("An error occured.");
           }
         }}
         onFileRemoved={(fileIdx) => {
-          const updatedFiles = [...files];
+          const updatedFiles = [...files2];
           updatedFiles.splice(fileIdx, 1);
-          setFiles(updatedFiles);
+          setFiles2(updatedFiles);
         }}
       />
     </Container>

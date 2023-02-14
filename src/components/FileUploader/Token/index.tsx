@@ -6,7 +6,7 @@ export default function Token({
   onClose,
 }: {
   children: ReactNode;
-  onClose: () => void;
+  onClose?: () => void;
 }) {
   return (
     <div
@@ -20,9 +20,11 @@ export default function Token({
       }}
     >
       <div style={{ width: "100%" }}> {children} </div>
-      <SpaceBetween size="s">
-        <Button iconName="close" variant="inline-icon" onClick={onClose} />
-      </SpaceBetween>
+      {!!onClose && (
+        <SpaceBetween size="s">
+          <Button iconName="close" variant="inline-icon" onClick={onClose} />
+        </SpaceBetween>
+      )}
     </div>
   );
 }

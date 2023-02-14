@@ -23,7 +23,7 @@ export default function FileUploader({
   errorText?: string;
   files: File[];
   onFilesUploaded: (uploadedFiles: File[]) => void;
-  onFileRemoved: (fileIdx: number) => void;
+  onFileRemoved?: (fileIdx: number) => void;
   multiple?: boolean;
 }) {
   return (
@@ -62,9 +62,13 @@ export default function FileUploader({
             Array.from(files).map((file, fileIdx) => (
               <Token
                 key={`file-${fileIdx}`}
-                onClose={() => {
-                  onFileRemoved(fileIdx);
-                }}
+                onClose={
+                  onFileRemoved
+                    ? () => {
+                        onFileRemoved(fileIdx);
+                      }
+                    : null
+                }
               >
                 <FileEntry file={file} showImage />
               </Token>
