@@ -1,5 +1,16 @@
 import React, { ReactNode } from "react";
 import { Button, SpaceBetween } from "@cloudscape-design/components";
+import styled from "styled-components";
+import * as awsui from "@cloudscape-design/design-tokens";
+
+const TokenPanel = styled.div`
+  background-color: ${awsui.colorBackgroundItemSelected};
+  display: flex;
+  border: 0.2em solid ${awsui.colorBorderItemSelected};
+  padding: 1em;
+  margin: 1em;
+  border-radius: 1em;
+`;
 
 export default function Token({
   children,
@@ -9,22 +20,13 @@ export default function Token({
   onClose?: () => void;
 }) {
   return (
-    <div
-      style={{
-        display: "flex",
-        border: "0.2em solid #0972d3",
-        backgroundColor: "#f2f8fd",
-        padding: "1em",
-        margin: "1em",
-        borderRadius: "1em",
-      }}
-    >
+    <TokenPanel>
       <div style={{ width: "100%" }}> {children} </div>
       {!!onClose && (
         <SpaceBetween size="s">
           <Button iconName="close" variant="inline-icon" onClick={onClose} />
         </SpaceBetween>
       )}
-    </div>
+    </TokenPanel>
   );
 }
