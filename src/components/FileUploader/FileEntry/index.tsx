@@ -24,7 +24,7 @@ export default function FileEntry({
 
   const ext = file.name.split(".").pop();
   const displayFileName =
-    file.name.length - ext.length > truncateLength
+    file.name.length - ext.length - 1 > truncateLength
       ? `${file.name.slice(0, truncateLength)}... .${ext}`
       : file.name;
 
