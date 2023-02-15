@@ -19,6 +19,7 @@ describe("test FileUploader", () => {
   });
   const file3 = new File(["ALSUdragonbook"], "ALSUdragonbook.pdf", {
     type: "application/pdf",
+    lastModified: new Date("1999-01-02T00:00:00").getTime(),
   });
   const singleFiles = [file1];
   const multipleFiles = [file1, file2, file3];
@@ -105,5 +106,31 @@ describe("test FileUploader", () => {
     closeButton?.click();
 
     expect(onFileRemoved).toBeCalledTimes(1);
+  });
+
+  it("renders translations when i18nStrings are set", () => {
+    const onFilesUploaded = jest.fn();
+    const { container } = render(
+      <FileUploader
+        fileInputId="fileUploadId"
+        text="Upload file"
+        files={multipleFiles}
+        onFilesUploaded={onFilesUploaded}
+        multiple
+        i18nStrings={{
+          numberOfBytes: (n) => `${n} B`,
+          lastModified: (d) =>
+            `最終変更：${d.toLocaleDateString("ja-JP", {
+              weekday: "long",
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })}`,
+        }}
+      />
+    );
+
+    const text = queryByText(container, "最終変更：1999年1月2日土曜日");
+    expect(text).toBeInTheDocument();
   });
 });

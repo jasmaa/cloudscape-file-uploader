@@ -71,4 +71,29 @@ describe("test FileEntry", () => {
     const text = queryByText(container, "Last modified: Sat Jan 02 1999");
     expect(text).toBeInTheDocument();
   });
+
+  it("renders translations when i18nStrings are set", () => {
+    const file = new File(["foo"], "foo.txt", {
+      type: "text/plain",
+      lastModified: new Date("1999-01-02T00:00:00").getTime(),
+    });
+    const { container } = render(
+      <FileEntry
+        file={file}
+        i18nStrings={{
+          numberOfBytes: (n) => `${n} B`,
+          lastModified: (d) =>
+            `最終変更：${d.toLocaleDateString("ja-JP", {
+              weekday: "long",
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })}`,
+        }}
+      />
+    );
+
+    const text = queryByText(container, "最終変更：1999年1月2日土曜日");
+    expect(text).toBeInTheDocument();
+  });
 });

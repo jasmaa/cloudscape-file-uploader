@@ -9,10 +9,15 @@ export default function FileEntry({
   file,
   showImage = false,
   truncateLength = 20,
+  i18nStrings,
 }: {
   file: File;
   showImage?: boolean;
   truncateLength?: number;
+  i18nStrings?: {
+    numberOfBytes: (n: number) => string;
+    lastModified: (d: Date) => string;
+  };
 }) {
   const [imageData, setImageData] = useState<string>();
 
@@ -27,6 +32,8 @@ export default function FileEntry({
     file.name.length - ext.length - 1 > truncateLength
       ? `${file.name.slice(0, truncateLength)}... .${ext}`
       : file.name;
+  const lastModifiedDate = new Date(file.lastModified);
+  const fileSize = file.size;
 
   return (
     <SpaceBetween size="s" direction="horizontal">
@@ -43,9 +50,15 @@ export default function FileEntry({
       )}
       <SpaceBetween size="s">
         <Box>{displayFileName}</Box>
-        <Box variant="small">{file.size} bytes</Box>
         <Box variant="small">
-          Last modified: {new Date(file.lastModified).toDateString()}
+          {i18nStrings
+            ? i18nStrings.numberOfBytes(fileSize)
+            : `${fileSize} bytes`}
+        </Box>
+        <Box variant="small">
+          {i18nStrings
+            ? i18nStrings.lastModified(lastModifiedDate)
+            : `Last modified: ${lastModifiedDate.toDateString()}`}
         </Box>
       </SpaceBetween>
     </SpaceBetween>
