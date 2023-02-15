@@ -1,14 +1,7 @@
 import React from "react";
-import {
-  Box,
-  Button,
-  FormField,
-  S3ResourceSelector,
-} from "@cloudscape-design/components";
+import { Box, Button, FormField } from "@cloudscape-design/components";
 import FileEntry from "./FileEntry";
 import Token from "./Token";
-
-S3ResourceSelector;
 
 export default function FileUploader({
   fileInputId,
