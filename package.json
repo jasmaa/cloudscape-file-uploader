@@ -1,6 +1,6 @@
 {
   "name": "cloudscape-file-uploader",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "File uploader for Cloudscape",
   "main": "index.js",
   "scripts": {
@@ -11,15 +11,19 @@
   "author": "jasmaa",
   "license": "MIT",
   "dependencies": {
+    "styled-components": "^5.3.6"
+  },
+  "peerDependencies": {
     "@cloudscape-design/components": "^3.0.4",
     "@cloudscape-design/design-tokens": "^3.0.8",
-    "react": "^18.2.0",
-    "styled-components": "^5.3.6"
+    "react": "^18.2.0"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.20.2",
     "@babel/preset-react": "^7.18.6",
     "@babel/preset-typescript": "^7.18.6",
+    "@cloudscape-design/components": "^3.0.197",
+    "@cloudscape-design/design-tokens": "^3.0.9",
     "@cloudscape-design/test-utils-core": "^1.0.9",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
@@ -34,6 +38,7 @@
     "eslint-plugin-react": "^7.32.2",
     "jest": "^27.5.1",
     "prettier": "^2.8.4",
+    "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rimraf": "^4.1.2",
     "typescript": "^4.9.5"

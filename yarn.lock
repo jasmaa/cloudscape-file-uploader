@@ -1160,10 +1160,10 @@
   resolved "https://registry.yarnpkg.com/@cloudscape-design/collection-hooks/-/collection-hooks-1.0.19.tgz#3c0d50751a2c5965b5dcb7e94def81dcda1ea782"
   integrity sha512-dd5K+o0bTxmNephTglVSwKPTOs+S+hekKCAf1M7dthuCsgEiYVSMAan+Uu+e7EG64atPGIsg+me9BJofF7VmFA==
 
-"@cloudscape-design/components@^3.0.4":
-  version "3.0.196"
-  resolved "https://registry.yarnpkg.com/@cloudscape-design/components/-/components-3.0.196.tgz#ac6ceb29ae8dbe41741cce6859e1b175a66ec380"
-  integrity sha512-4dwRdDo4/n0pjvEqfl/OKprewoL8jKVIacDSvl4CRtNUbbBGVFZBKXLMP6JuAF143LjCklpuvIWSv7a3G0ikcw==
+"@cloudscape-design/components@^3.0.197":
+  version "3.0.197"
+  resolved "https://registry.yarnpkg.com/@cloudscape-design/components/-/components-3.0.197.tgz#9d5f84583b057cacb7fdbc9dc7ca62b6a47bf8bf"
+  integrity sha512-rd1/8nCVVhKj+qq7G3Xz/G4AkNwDCCuNlzm9VLn1th2RJltkE/TvCBaPSXcyxItM0NdM9ahlI4+YqhpFqQOPqg==
   dependencies:
     "@cloudscape-design/collection-hooks" "^1.0.0"
     "@cloudscape-design/test-utils-core" "^1.0.0"
@@ -1182,10 +1182,10 @@
     tslib "^2.4.0"
     weekstart "^1.1.0"
 
-"@cloudscape-design/design-tokens@^3.0.8":
-  version "3.0.8"
-  resolved "https://registry.yarnpkg.com/@cloudscape-design/design-tokens/-/design-tokens-3.0.8.tgz#c33f6161a935f9b9d79418a4b9ed663f56f5de8e"
-  integrity sha512-zjG9wt4JfRFngXlFl4VT13bBA9aJSXw4nUPNOBcwMjrvT2drGmph3ESP2Eem1VBv0gyb7Hzz30BRHHh9VojSgQ==
+"@cloudscape-design/design-tokens@^3.0.9":
+  version "3.0.9"
+  resolved "https://registry.yarnpkg.com/@cloudscape-design/design-tokens/-/design-tokens-3.0.9.tgz#7bf8c7bdfcee640764007ef0fafa1a12384d9fba"
+  integrity sha512-7j9OTWg/yQaOoPUqMAN6VnzxfHKD2lCiyW9xW+gblvLlvgOJPMPgZsHKsUE9v14tAtMOZXkIXfoZ1jWH0onotQ==
 
 "@cloudscape-design/test-utils-core@^1.0.0", "@cloudscape-design/test-utils-core@^1.0.9":
   version "1.0.9"
@@ -1935,9 +1935,9 @@ abab@^2.0.3, abab@^2.0.5:
   integrity sha512-j2afSsaIENvHZN2B8GOpF566vZ5WVk5opAiMTvWgaQT8DkbOqsTfvNAvHoRGU2zzP8cPoqys+xHTRDWW8L+/BA==
 
 ace-builds@^1.4.13:
-  version "1.15.0"
-  resolved "https://registry.yarnpkg.com/ace-builds/-/ace-builds-1.15.0.tgz#e4e5eee17a1d3d17fc92c1207bbc30f185f260cc"
-  integrity sha512-L1RXgqxDvzbJ7H8Y2v9lb4kHaZRn5JNTECG+oZTH2EDewMmpQMLDC4GnFKIh3+xb/gk2nVPO7gGwpTYPw91QzA==
+  version "1.15.1"
+  resolved "https://registry.yarnpkg.com/ace-builds/-/ace-builds-1.15.1.tgz#221ee133212b05e97cc2604b50113e679e763569"
+  integrity sha512-ZpexFbyuBqwmaForJb1NHfNHK59zgxHoeNcSYL/7LEYu8yu262EtCzyc90uOTAoSMLEk59F1tW+FKclzdqc6vA==
 
 acorn-globals@^6.0.0:
   version "6.0.0"
@@ -5185,15 +5185,10 @@ tslib@^1.8.1:
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
   integrity sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
 
-tslib@^2.0.0, tslib@^2.4.0:
+tslib@^2.0.0, tslib@^2.0.3, tslib@^2.4.0:
   version "2.5.0"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.5.0.tgz#42bfed86f5787aeb41d031866c8f402429e0fddf"
   integrity sha512-336iVw3rtn2BUK7ORdIAHTyxHGRIHVReokCR3XjbckJMK7ms8FysBfhLR8IXnAgy7T0PTPNBWKiH514FOW/WSg==
-
-tslib@^2.0.3:
-  version "2.4.0"
-  resolved "https://registry.npmjs.org/tslib/-/tslib-2.4.0.tgz"
-  integrity sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==
 
 tsutils@^3.21.0:
   version "3.21.0"

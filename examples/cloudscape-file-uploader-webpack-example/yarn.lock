@@ -129,7 +129,7 @@
   resolved "https://registry.yarnpkg.com/@cloudscape-design/collection-hooks/-/collection-hooks-1.0.19.tgz#3c0d50751a2c5965b5dcb7e94def81dcda1ea782"
   integrity sha512-dd5K+o0bTxmNephTglVSwKPTOs+S+hekKCAf1M7dthuCsgEiYVSMAan+Uu+e7EG64atPGIsg+me9BJofF7VmFA==
 
-"@cloudscape-design/components@^3.0.196", "@cloudscape-design/components@^3.0.4":
+"@cloudscape-design/components@^3.0.196":
   version "3.0.196"
   resolved "https://registry.yarnpkg.com/@cloudscape-design/components/-/components-3.0.196.tgz#ac6ceb29ae8dbe41741cce6859e1b175a66ec380"
   integrity sha512-4dwRdDo4/n0pjvEqfl/OKprewoL8jKVIacDSvl4CRtNUbbBGVFZBKXLMP6JuAF143LjCklpuvIWSv7a3G0ikcw==
@@ -150,11 +150,6 @@
     react-virtual "^2.8.2"
     tslib "^2.4.0"
     weekstart "^1.1.0"
-
-"@cloudscape-design/design-tokens@^3.0.8":
-  version "3.0.8"
-  resolved "https://registry.yarnpkg.com/@cloudscape-design/design-tokens/-/design-tokens-3.0.8.tgz#c33f6161a935f9b9d79418a4b9ed663f56f5de8e"
-  integrity sha512-zjG9wt4JfRFngXlFl4VT13bBA9aJSXw4nUPNOBcwMjrvT2drGmph3ESP2Eem1VBv0gyb7Hzz30BRHHh9VojSgQ==
 
 "@cloudscape-design/global-styles@^1.0.7":
   version "1.0.7"
@@ -881,11 +876,8 @@ clone-deep@^4.0.1:
     shallow-clone "^3.0.0"
 
 cloudscape-file-uploader@../../dist:
-  version "1.0.0"
+  version "1.0.2"
   dependencies:
-    "@cloudscape-design/components" "^3.0.4"
-    "@cloudscape-design/design-tokens" "^3.0.8"
-    react "^18.2.0"
     styled-components "^5.3.6"
 
 clsx@^1.1.0:
