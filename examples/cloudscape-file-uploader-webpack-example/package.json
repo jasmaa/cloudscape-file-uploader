@@ -1,5 +1,5 @@
 {
-  "name": "cloudscape-file-uploader-example",
+  "name": "cloudscape-file-uploader-webpack-example",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -14,6 +14,8 @@
     "deploy": "gh-pages -d dist --no-history"
   },
   "devDependencies": {
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
     "css-loader": "^6.7.3",
     "html-webpack-plugin": "^5.5.0",
     "style-loader": "^3.3.1",
@@ -26,8 +28,10 @@
   "dependencies": {
     "@cloudscape-design/components": "^3.0.196",
     "@cloudscape-design/global-styles": "^1.0.7",
-    "cloudscape-file-uploader": "file:../../dist",
+    "cloudscape-file-uploader": "../../dist",
+    "dist": "^0.1.2",
     "gh-pages": "^5.0.0",
+    "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }
 }

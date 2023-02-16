@@ -48,7 +48,7 @@ export default function FileEntry({
           src={imageData}
         />
       )}
-      <SpaceBetween size="s">
+      <SpaceBetween size="xxxs">
         <Box>{displayFileName}</Box>
         <Box variant="small">
           {i18nStrings
