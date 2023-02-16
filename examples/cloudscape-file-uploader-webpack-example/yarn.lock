@@ -888,14 +888,6 @@ cloudscape-file-uploader@../../dist:
     react "^18.2.0"
     styled-components "^5.3.6"
 
-"cloudscape-file-uploader@file:../../dist":
-  version "1.0.0"
-  dependencies:
-    "@cloudscape-design/components" "^3.0.4"
-    "@cloudscape-design/design-tokens" "^3.0.8"
-    react "^18.2.0"
-    styled-components "^5.3.6"
-
 clsx@^1.1.0:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/clsx/-/clsx-1.2.1.tgz#0ddc4a20a549b59c93a4116bb26f5294ca17dc12"
