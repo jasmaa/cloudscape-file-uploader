@@ -54,7 +54,7 @@ function App() {
 }
 ```
 
-See more [examples](./examples/cloudscape-file-uploader-example).
+See more [examples](./examples).
 
 ## Development
 
