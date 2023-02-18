@@ -9,7 +9,7 @@ const TokenPanel = styled.div`
   border: 0.2em solid ${awsui.colorBorderItemSelected};
   padding: 1em;
   margin: 1em;
-  border-radius: 1em;
+  border-radius: ${awsui.borderRadiusToken};
 `;
 
 export default function Token({
