@@ -1,0 +1,39 @@
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [Unreleased]
+
+## [1.0.4] - 2023-02-18
+
+### Changed
+
+- Fixed Token border radius to use design tokens value
+- Update package metadata
+
+## [1.0.3] - 2023-02-15
+
+### Changed
+
+- Move React and Cloudscape dependencies to peer dependencies
+
+## [1.0.2] - 2023-02-15
+
+### Changed
+
+- Fix screenshot in readme in NPM distribution
+
+## [1.0.1] - 2023-02-15
+
+### Added
+
+- Add readme to NPM distribution
+
+## [1.0.0] - 2023-02-15
+
+### Added
+
+- Initial release

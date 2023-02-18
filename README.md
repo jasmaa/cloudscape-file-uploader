@@ -27,6 +27,7 @@ yarn add cloudscape-file-uploader
 Add `FileUploader` to project:
 
 ```jsx
+import React, { useState } from "react";
 import { FileUploader } from "cloudscape-file-uploader";
 
 function App() {
