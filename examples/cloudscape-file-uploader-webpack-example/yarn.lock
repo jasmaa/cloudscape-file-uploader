@@ -876,7 +876,12 @@ clone-deep@^4.0.1:
     shallow-clone "^3.0.0"
 
 cloudscape-file-uploader@../../dist:
-  version "1.0.2"
+  version "1.0.3"
+  dependencies:
+    styled-components "^5.3.6"
+
+"cloudscape-file-uploader@file:../../dist":
+  version "1.0.3"
   dependencies:
     styled-components "^5.3.6"
 

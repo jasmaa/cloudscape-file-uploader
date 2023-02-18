@@ -1,8 +1,10 @@
-import React, { useState } from "react";
-import { Container } from "@cloudscape-design/components";
-import { FileUploader } from "cloudscape-file-uploader";
+import React, { useState } from 'react';
+import logo from './logo.svg';
+import './App.css';
+import { Container } from '@cloudscape-design/components';
+import { FileUploader } from 'cloudscape-file-uploader';
 
-export default function App() {
+function App() {
   const [files1, setFiles1] = useState<File[]>([]);
   const [errorText1, setErrorText1] = useState<string>();
   const [files2, setFiles2] = useState<File[]>([]);
@@ -53,3 +55,5 @@ export default function App() {
     </Container>
   );
 }
+
+export default App;

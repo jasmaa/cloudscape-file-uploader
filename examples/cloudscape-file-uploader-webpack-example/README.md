@@ -10,7 +10,7 @@ Install packages and start dev server:
 
 ```
 yarn install
-yarn add ../../dist
+yarn add file:../../dist
 ```
 
 Run with dev server:
