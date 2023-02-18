@@ -10,16 +10,47 @@ A file uploader for Cloudscape following: https://cloudscape.design/components/f
 
 ## Usage
 
-Install the package with npm:
+Install the package and Cloudscape peer dependencies with npm:
 
 ```
+npm install @cloudscape-design/components @cloudscape-design/design-tokens
 npm install cloudscape-file-uploader
 ```
 
 ...or with Yarn
 
 ```
+yarn add @cloudscape-design/components @cloudscape-design/design-tokens
 yarn add cloudscape-file-uploader
+```
+
+Add `FileUploader` to project:
+
+```jsx
+import { FileUploader } from "cloudscape-file-uploader";
+
+function App() {
+  const [files, setFiles] = useState([]);
+  const [errorText, setErrorText] = useState("");
+
+  return (
+    <FileUploader
+      fileInputId="singleFileUpload"
+      text="Choose a file to upload"
+      label="Upload a file"
+      errorText={errorText}
+      files={files}
+      onFilesUploaded={(uploadedFiles) => {
+        if (uploadedFiles.length === 1) {
+          setFiles1([...uploadedFiles]);
+          setErrorText("");
+        } else {
+          setErrorText("An error occured.");
+        }
+      }}
+    />
+  );
+}
 ```
 
 See more [examples](./examples/cloudscape-file-uploader-example).
