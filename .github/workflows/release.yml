@@ -2,8 +2,8 @@ name: Publish Package to npmjs
 on:
   # TODO: remove me
   push:
-      branches:
-        - main
+    branches:
+      - main
   release:
     types: [published]
 jobs:
