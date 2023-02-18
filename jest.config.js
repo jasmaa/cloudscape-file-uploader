@@ -3,5 +3,6 @@ module.exports = {
   moduleNameMapper: {
     "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js",
   },
+  modulePathIgnorePatterns: ["examples"],
   testEnvironment: "jsdom",
 };

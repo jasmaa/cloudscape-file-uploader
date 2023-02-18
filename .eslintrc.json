@@ -21,6 +21,7 @@
     "babel.config.js",
     "jest.config.js",
     "dist",
+    "examples",
     "**/__mocks__/*"
   ]
 }
