@@ -16,11 +16,10 @@ jobs:
         with:
           node-version: "16"
           registry-url: "https://registry.npmjs.org"
+          always-auth: true
       - run: yarn install --immutable --immutable-cache --check-cache
       - run: yarn test
       - run: yarn build
-      # TODO: remove me
-      - run: cat .npmrc
-      - run: npm publish dist
+      - run: yarn publish dist
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
