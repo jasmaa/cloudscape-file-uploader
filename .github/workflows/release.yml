@@ -15,6 +15,8 @@ jobs:
       - run: yarn install --immutable --immutable-cache --check-cache
       - run: yarn test
       - run: yarn build
+      # TODO: remove me
+      - run: cat .npmrc
       - run: npm publish dist
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
