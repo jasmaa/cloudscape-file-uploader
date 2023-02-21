@@ -6,7 +6,7 @@
   "description": "Cloudscape file uploader example",
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "webpack --mode=production --node-env=production",
+    "build": "mkdir dist && cp index.html dist",
     "build:dev": "webpack --mode=development",
     "build:prod": "webpack --mode=production --node-env=production",
     "watch": "webpack --watch",
