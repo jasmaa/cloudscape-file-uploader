@@ -1,6 +1,6 @@
 name: Publish example demo
 on:
-  push:
+  pull_request:
     branches:
       - main
 
