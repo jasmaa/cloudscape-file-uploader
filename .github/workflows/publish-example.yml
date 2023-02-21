@@ -1,0 +1,30 @@
+name: Publish example demo
+on:
+  workflow_run:
+    workflows: ["Test and build package"]
+    types: [completed]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+      - run: yarn install --immutable --immutable-cache --check-cache
+      - run: yarn build
+      - name: Install in example
+        working-directory: ./examples/cloudscape-file-uploader-webpack-example
+        run: yarn install --immutable --immutable-cache --check-cache
+      - name: Build example
+        working-directory: ./examples/cloudscape-file-uploader-webpack-example
+        run: yarn build
+      - name: Deploy example
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: ./examples/cloudscape-file-uploader-webpack-example/dist
+          single-commit: true
