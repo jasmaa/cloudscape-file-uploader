@@ -1,8 +1,8 @@
 name: Publish example demo
 on:
-  workflow_run:
-    workflows: ["Test and build package"]
-    types: [completed]
+  push:
+    branches:
+      - main
 
 permissions:
   contents: write
