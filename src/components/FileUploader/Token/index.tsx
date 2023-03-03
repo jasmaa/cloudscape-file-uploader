@@ -24,7 +24,12 @@ export default function Token({
       <div style={{ width: "100%" }}> {children} </div>
       {!!onClose && (
         <SpaceBetween size="s">
-          <Button iconName="close" variant="inline-icon" onClick={onClose} />
+          <Button
+            iconName="close"
+            variant="inline-icon"
+            onClick={onClose}
+            ariaLabel="close-token"
+          />
         </SpaceBetween>
       )}
     </TokenPanel>
