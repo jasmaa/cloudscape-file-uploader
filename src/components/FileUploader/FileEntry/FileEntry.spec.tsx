@@ -1,7 +1,10 @@
 import React from "react";
 import { queryByRole, queryByText, render } from "@testing-library/react";
 import "@testing-library/jest-dom";
+import { axe, toHaveNoViolations } from "jest-axe";
 import FileEntry from ".";
+
+expect.extend(toHaveNoViolations);
 
 describe("test FileEntry", () => {
   const file = new File(["foo"], "foo.txt", {
@@ -95,5 +98,13 @@ describe("test FileEntry", () => {
 
     const text = queryByText(container, "最終変更：1999年1月2日土曜日");
     expect(text).toBeInTheDocument();
+  });
+
+  it("has no a11y violations", async () => {
+    const { container } = render(<FileEntry file={file} showImage />);
+
+    const results = await axe(container);
+
+    expect(results).toHaveNoViolations();
   });
 });

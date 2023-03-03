@@ -8,7 +8,10 @@ import {
 } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import createWrapper from "@cloudscape-design/components/test-utils/dom";
+import { axe, toHaveNoViolations } from "jest-axe";
 import FileUploader from ".";
+
+expect.extend(toHaveNoViolations);
 
 describe("test FileUploader", () => {
   const file1 = new File(["foo"], "foo.txt", {
@@ -132,5 +135,21 @@ describe("test FileUploader", () => {
 
     const text = queryByText(container, "最終変更：1999年1月2日土曜日");
     expect(text).toBeInTheDocument();
+  });
+
+  it("has no a11y violations", async () => {
+    const onFilesUploaded = jest.fn();
+    const { container } = render(
+      <FileUploader
+        fileInputId="fileUploadId"
+        text="Upload file"
+        files={singleFiles}
+        onFilesUploaded={onFilesUploaded}
+      />
+    );
+
+    const results = await axe(container);
+
+    expect(results).toHaveNoViolations();
   });
 });

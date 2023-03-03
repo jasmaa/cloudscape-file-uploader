@@ -40,6 +40,7 @@ export default function FileEntry({
       <StatusIndicator type="success" />
       {showImage && (
         <img
+          alt={file.name}
           style={{
             width: "5em",
             height: "5em",
