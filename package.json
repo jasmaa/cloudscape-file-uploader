@@ -1,6 +1,6 @@
 {
   "name": "cloudscape-file-uploader",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "File uploader for Cloudscape",
   "main": "index.js",
   "repository": {
