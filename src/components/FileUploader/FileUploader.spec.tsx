@@ -31,6 +31,26 @@ describe("test FileUploader", () => {
     jest.resetAllMocks();
   });
 
+  it("does not submit form when upload button clicked", async () => {
+    const onSubmit = jest.fn();
+    const onFilesUploaded = jest.fn();
+    const { container } = render(
+      <form onSubmit={onSubmit}>
+        <FileUploader
+          fileInputId="fileUploadId"
+          text="Upload file"
+          files={singleFiles}
+          onFilesUploaded={onFilesUploaded}
+        />
+      </form>
+    );
+
+    const uploadButton = createWrapper(container).findButton();
+    uploadButton?.click();
+
+    expect(onSubmit.mock.calls.length).toBe(0);
+  });
+
   it("uploads single file", async () => {
     const onFilesUploaded = jest.fn();
     const { container } = render(

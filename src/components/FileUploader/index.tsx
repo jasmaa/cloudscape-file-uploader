@@ -41,6 +41,7 @@ export default function FileUploader({
       >
         <Button
           iconName="upload"
+          formAction="none"
           onClick={() => {
             document.getElementById(fileInputId).click();
           }}
