@@ -1,5 +1,7 @@
 # Cloudscape File Uploader
 
+**⚠️ THIS PACKAGE IS DEPRECATED. PLEASE USE THE [OFFICIAL COMPONENT](https://cloudscape.design/components/file-upload/?tabId=playground). ⚠️**
+
 [![NPM version](https://img.shields.io/npm/v/cloudscape-file-uploader)](https://www.npmjs.com/package/cloudscape-file-uploader)
 [![Build](https://img.shields.io/github/actions/workflow/status/jasmaa/cloudscape-file-uploader/build.yml)](https://github.com/jasmaa/cloudscape-file-uploader/actions/workflows/build.yml)
 [![Codecov](https://img.shields.io/codecov/c/github/jasmaa/cloudscape-file-uploader)](https://app.codecov.io/gh/jasmaa/cloudscape-file-uploader)

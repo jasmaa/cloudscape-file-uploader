@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.9] - 2023-04-22
+
+### Changed
+
+- Deprecate FileUploader. [FileUpload component](https://github.com/cloudscape-design/components/commit/7af6a3f02d6cb31908889469efb4045a20958d63) is officially available in Cloudscape 3.0.259.
 
 ## [1.0.8] - 2023-04-15
 
